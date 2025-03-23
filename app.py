@@ -5,8 +5,12 @@ import pytesseract
 import pdfplumber  # Using pdfplumber for PDF text extraction
 import pandas as pd
 import re
+from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(app)
 
 # Set up folder to save uploaded PDFs
 UPLOAD_FOLDER = 'uploads'
